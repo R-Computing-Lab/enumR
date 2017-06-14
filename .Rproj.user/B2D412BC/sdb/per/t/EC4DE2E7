@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#' @title Generate Factor Loadings Matrix\n#'\n#' @description\n#' \\code{GenFactorMatrix} returns a matrix of factor loadings, based on number of items, factors, and loadings\n#'\n#'\n#' @param nfactors Number of factors\n#' @param items vector of total number of items per factor\n#' @param ritems Number of items per factor that are reverse scored\n#' @param loading Factor loading magnitude. Default is .5\n#' @param loading_norm If TRUE, generate factor loadings that average to \\code{loading}\n#' @param loading_norm_sd If \\code{loading_norm} is TRUE, standard deviation of loadings.\n#' @return \\code{matrix} of n factors by i items\n\nGenFactorMatrix = function(nfactors = 5, items= c(5,5,5,5,5), ritems=c(2,2,2,2,2), loading=.5,loading_norm=FALSE,loading_norm_sd=.025){ # Generate Factor Loadings\n\n  Loadings = matrix(rep(0,sum(items)*nfactors),\n  ncol=nfactors,byrow=TRUE)\n  if(!loading_norm){\n    for(i in 1:nfactors){\n    Loadings[(sum(items[1:i-1])+1):sum(items[1:i]),i]<-rep(loading,items[i])\n\n    if(ritems[i]>0){ #reverse score items\n    Loadings[(sum(items[1:i-1])+1):(sum(items[1:i-1])+ritems[i]),i]<- -rep(loading,ritems[i])}\n    }\n    } else{\n      for(i in 1:nfactors){\n        Loadings[(sum(items[1:i-1])+1):sum(items[1:i]),i]<-round(rnorm(items[i], mean = loading,sd=loading_norm_sd),digits=2)\n\n        if(ritems[i]>0){ #reverse score items\n          Loadings[(sum(items[1:i-1])+1):(sum(items[1:i-1])+ritems[i]),i]<- - Loadings[(sum(items[1:i-1])+1):(sum(items[1:i-1])+ritems[i]),i]\n    }\n      }\n    }\n  return(Loadings)\n}\n\n",
+    "created" : 1497218387312.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3326892842",
+    "id" : "EC4DE2E7",
+    "lastKnownWriteTime" : 1497132296,
+    "last_content_update" : 1497132296,
+    "path" : "C:/Dropbox/Lab/Research/Projects/Current/enumR/R/GenFactorMatrix.R",
+    "project_path" : "R/GenFactorMatrix.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,9 @@
+conditions
+
+input: number of factors
+
+given number of factors, items per factor factors
+
+number of reversed score (max number is given number per items)
+
+factor quality

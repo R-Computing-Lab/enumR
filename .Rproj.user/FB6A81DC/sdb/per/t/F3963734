@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "Package: enumR\nType: Package\nTitle: Factor Enumeration Functions\nVersion: 0.1.0\nAuthor: S. Mason Garrisn\nMaintainer: S. Mason Garrisn <s.mason.garrison@gmail.com>\nDescription: Functions for creating custom model fit thresholds for factor analytic data.\nURL: http://www.smasongarrison.com\nLicense: GPL-3\nEncoding: UTF-8\nLazyData: true\nRoxygenNote: 6.0.1\nImports: stats, psych, GPArotation, GAIPE, Rcpp\n",
+    "created" : 1497368525366.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "190018905",
+    "id" : "F3963734",
+    "lastKnownWriteTime" : 1497372042,
+    "last_content_update" : 1497372042186,
+    "path" : "E:/Dropbox/Lab/Research/Projects/Current/enumR/DESCRIPTION",
+    "project_path" : "DESCRIPTION",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "dcf"
+}

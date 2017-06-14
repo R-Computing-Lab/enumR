@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(roxygen2)\nffd=GenFactorMatrix()\neffectmatrix=GenStructure()\n\ndf=GenData(ffd,effectmatrix,samplesize=1000)\n\nenumR(cov(df),nfactors=5,truemodel = TRUE )\n\n(maybe=enumRsimulation(samplesize=500, loading_norm=FALSE,\n                       loading_norm_sd=.05,\n                       r_norm =FALSE,\n                       r_norm_SD =.015))[1]\n",
+    "created" : 1497367443548.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "133347205",
+    "id" : "CC002878",
+    "lastKnownWriteTime" : 1497367525,
+    "last_content_update" : 1497367525170,
+    "path" : "E:/Dropbox/Lab/Research/Projects/Current/enumR/R/tesyy.r",
+    "project_path" : "R/tesyy.r",
+    "properties" : {
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
