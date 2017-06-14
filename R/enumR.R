@@ -16,7 +16,7 @@
 #' @return dataframe
 
 
-enumR<-function(x, nfactors = 8, rotation = "oblimin", diagonal = FALSE, method = "ml",samplesize=NULL,use="pairwise",cor="cov",truemodel=FALSE,...){
+enumR<-function(x, nfactors = 8, rotation = "oblimin", diagonal = FALSE, method = "mle",samplesize=NULL,use="pairwise",cor="cov",truemodel=FALSE,...){
   require(psych)
   require(GAIPE)
   n=nfactors; fm=method
